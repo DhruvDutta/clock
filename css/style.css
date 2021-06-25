@@ -140,5 +140,5 @@ body{
     box-shadow: inset 1px 1px 10px #222;
 }
 #time :nth-child(1){
-    font-size: 6em;
+    font-size: 5.5vw;
 }
