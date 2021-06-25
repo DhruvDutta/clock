@@ -18,6 +18,10 @@ body{
     height: 80vmin;
     width: 80vmin;
     perspective: 1000px;
+    cursor: pointer;
+}
+.analog,.digital{
+    transition: 1.5s;
 }
 .analog{
     width: 100%;
@@ -28,6 +32,7 @@ body{
     border-radius: 50%;
     transform-style: preserve-3d;
     background-color: white;
+    backface-visibility: hidden;
 }
 .analog img{
     position: absolute;
@@ -47,7 +52,7 @@ body{
 }
 .analog>span::after{
     content: '';
-    height: 25px;
+    height: 5%;
     width: 1px;
     background-color: var(--primary);
     position: absolute;
@@ -56,8 +61,8 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 15px;
-    width: 15px;
+    height: 3%;
+    width: 3%;
     border: 2px solid var(--primary);
     background-color: white;
     border-radius: 50%;
@@ -71,7 +76,7 @@ body{
 .hour{
     position: absolute;
     height: 25%;
-    width: 8px;
+    width: 1.3%;
     border-radius: 100% 100% 0 0; 
     background-color: var(--primary);
     top: 50%;
@@ -82,7 +87,7 @@ body{
 .min{
     position: absolute;
     height: 35%;
-    width: 3px;
+    width: 0.75%;
     border-radius: 100% 100% 0 0;
     background-color: var(--primary);
     top: 50%;
@@ -99,7 +104,7 @@ body{
     left: 50%;
     transform: translate(-50%,-100%);
 }
-.digital{
+.date_box{
     width: 100%;
     height: 100%;
     position: relative;
@@ -109,9 +114,31 @@ body{
     top: 50%;
     left: 25%;
     transform: translate(-50%,-50%);
-    font-size: 1.2em;
+    font-size: large;
     padding: .2em;
     border-radius: .1em;
     box-shadow: inset 1px 1px 5px #555;
 
+}
+.digital{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 25vmin;
+    width: 80vmin;
+    background-color: white;
+    transform-style: preserve-3d;
+    padding: .7em;
+    backface-visibility: hidden;
+    border-radius: .5em;
+}
+#time{
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    box-shadow: inset 1px 1px 10px #222;
+}
+#time :nth-child(1){
+    font-size: 6em;
 }

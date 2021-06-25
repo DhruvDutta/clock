@@ -11,9 +11,11 @@
 </head>
 <body>
     <div class="clock" onclick="toggleClock()">
-        <div class="analog">
+        <div class="digital" id="digital">
+            <div id="time" class="d-flex align-items-center justify-content-center flex-column"></div>
+        </div>
+        <div class="analog" id="analog">
             <img src="./css/bird.png" alt="" srcset="">
-
             <div class="hour" id="hour"></div>
             <div class="min" id="min"></div>
             <div class="sec" id="sec"></div>
@@ -30,8 +32,8 @@
             <span style="--i:10;"></span>
             <span style="--i:11;"></span>
             <span style="--i:12;"></span>
-            <div class="digital">
-                <div class="date px-3" id="datediv">June 25th</div>
+            <div class="date_box">
+                <div class="date px-3" id="datediv"></div>
             </div>
         </div>
         
