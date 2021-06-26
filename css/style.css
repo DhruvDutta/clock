@@ -6,6 +6,10 @@
     font-family: monospace;
 
 }
+@font-face {
+    font-family: digitalfont;
+    src: url(digital-7.ttf);
+  }
 body{
     background-color: #222 !important;
     overflow: hidden;
@@ -133,19 +137,35 @@ body{
     backface-visibility: hidden;
     border-radius: .5em;
 }
+.digital::before{
+    content: '';
+    position: absolute;
+    height: 10%;
+    width: 60%;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5em 5em 0 0;
+    background-color: white;
+}
 #time{
     height: 100%;
     width: 100%;
     border-radius: .5em;
-    box-shadow: inset 1px 1px 10px #222;
+    box-shadow: inset 1px 1px 10px #000;
+    background-color: #333;
 }
 #time :nth-child(1){
-    font-size: 11vmin !important;
+    font-size: 16vmin;
+    font-family: digitalfont;
+    color: #ddd;
 }
 #time :nth-child(2){
-    font-size: 2vmin;
+    font-size: 4vmin;
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%,-50%);
+    font-family: digitalfont;
+    color: #ddd;
 }
