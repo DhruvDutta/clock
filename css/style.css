@@ -140,5 +140,12 @@ body{
     box-shadow: inset 1px 1px 10px #222;
 }
 #time :nth-child(1){
-    font-size: 5.5vw;
+    font-size: 11vmin !important;
+}
+#time :nth-child(2){
+    font-size: 2vmin;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
